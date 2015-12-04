@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image slider</title>
+    <style>
+        canvas { position: absolute; left: 0px;
+            top: 0px; width: 100%; height: 100%}
+    </style>
+    <script>
+        var image = new Image();
+        image.src = "star.svg";
+        var image2 = new Image();
+        image2.src = "star-off.svg";
+
+        function draw() {
+            var canvas = document.getElementById("imgCanvas");
+            var context = canvas.getContext("2d");
+            context.drawImage(image, 0, 0, canvas.width /10, canvas.height /10);
+            context.drawImage(image2, 65, 0, canvas.width /10, canvas.height /10);
+        }
+        function click(e) {
+
+        }
+        function updatePosition() {
+
+        }
+        window.addEventListener("load", draw, false);
+    </script>
+</head>
+<body>
+    <canvas id="imgCanvas"></canvas>
+</body>
+</html>
